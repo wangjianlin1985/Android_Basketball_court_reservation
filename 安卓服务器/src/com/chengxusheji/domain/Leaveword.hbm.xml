@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Leaveword" table="Leaveword">
+
+          <!-- 主键留言id -->
+          <id name="leaveWordId" column="leaveWordId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 约战标题 -->
+          <property
+            name="leaveTitle"
+            column="leaveTitle"
+            type="string"
+            length="80"
+          />
+
+          <!-- 简单字符串属性: 约战内容 -->
+          <property
+            name="leaveContent"
+            column="leaveContent"
+            type="string"
+            length="2000"
+          />
+
+          <!-- 简单字符串属性: 约战电话 -->
+          <property
+            name="telephone"
+            column="telephone"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 约战人 -->
+          <many-to-one name="userObj"
+            column="userObj"
+            class="UserInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 约战时间 -->
+          <property
+            name="leaveTime"
+            column="leaveTime"
+            type="string"
+            length="30"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MainUserActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="UserInfoListActivity"></activity>
+        <activity android:name="UserInfoQueryActivity"></activity>
+        <activity android:name="UserInfoAddActivity"></activity>
+        <activity android:name="UserInfoEditActivity"></activity>
+        <activity android:name="UserInfoDetailActivity"></activity>
+        <activity android:name="VideoListActivity"></activity>
+        <activity android:name="VideoQueryActivity"></activity>
+        <activity android:name="VideoAddActivity"></activity>
+        <activity android:name="VideoEditActivity"></activity>
+        <activity android:name="VideoDetailActivity"></activity>
+        <activity android:name="VideoTypeListActivity"></activity>
+        <activity android:name="VideoTypeQueryActivity"></activity>
+        <activity android:name="VideoTypeAddActivity"></activity>
+        <activity android:name="VideoTypeEditActivity"></activity>
+        <activity android:name="VideoTypeDetailActivity"></activity>
+        <activity android:name="PlaceListActivity"></activity>
+        <activity android:name="PlaceQueryActivity"></activity>
+        <activity android:name="PlaceAddActivity"></activity>
+        <activity android:name="PlaceOrderUserAddActivity"></activity>
+        <activity android:name="PlaceEditActivity"></activity>
+        <activity android:name="PlaceDetailActivity"></activity>
+        <activity android:name="PlaceOrderListActivity"></activity>
+        <activity android:name="PlaceOrderUserListActivity"></activity>
+        <activity android:name="PlaceOrderQueryActivity"></activity>
+        <activity android:name="PlaceOrderAddActivity"></activity>
+        <activity android:name="PlaceOrderEditActivity"></activity>
+        <activity android:name="PlaceOrderDetailActivity"></activity>
+        <activity android:name="TimeSectionListActivity"></activity>
+        <activity android:name="TimeSectionQueryActivity"></activity>
+        <activity android:name="TimeSectionAddActivity"></activity>
+        <activity android:name="TimeSectionEditActivity"></activity>
+        <activity android:name="TimeSectionDetailActivity"></activity>
+        <activity android:name="NewsListActivity"></activity>
+        <activity android:name="NewsQueryActivity"></activity>
+        <activity android:name="NewsAddActivity"></activity>
+        <activity android:name="NewsEditActivity"></activity>
+        <activity android:name="NewsDetailActivity"></activity>
+        <activity android:name="LeavewordListActivity"></activity>
+        <activity android:name="LeavewordQueryActivity"></activity>
+        <activity android:name="LeavewordAddActivity"></activity>
+        <activity android:name="LeavewordUserAddActivity"></activity>
+        <activity android:name="LeavewordEditActivity"></activity>
+        <activity android:name="LeavewordDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Place" table="Place">
+
+          <!-- 主键场地id -->
+          <id name="placeId" column="placeId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 场地名称 -->
+          <property
+            name="placeName"
+            column="placeName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单图片属性: 球场图片 -->
+          <property
+            name="placePhoto"
+            column="placePhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 球场地址 -->
+          <property
+            name="placePos"
+            column="placePos"
+            type="string"
+            length="80"
+          />
+
+          <!-- 简单字符串属性: 联系电话 -->
+          <property
+            name="telephone"
+            column="telephone"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单浮点型属性: 球场价格 -->
+          <property
+            name="placePrice"
+            column="placePrice"
+            type="float"
+          />
+
+          <!-- 简单字符串属性: 球场介绍 -->
+          <property
+            name="placeDesc"
+            column="placeDesc"
+            type="string"
+            length="800"
+          />
+
+          <!-- 简单字符串属性: 营业时间 -->
+          <property
+            name="onlineTime"
+            column="onlineTime"
+            type="string"
+            length="20"
+          />
+
+		  <!-- 简单整型属性: 销量 -->
+          <property  name="sellNum" type="int">
+         	 <column name="sellNum" not-null="true" default="0"/> 
+          </property>
+          
+          <!-- 简单整型属性: 是否置顶 -->
+          <property
+            name="topFlag"
+            column="topFlag"
+            type="int"
+
+          />
+
+          <!-- 简单字符串属性: 发布时间 -->
+          <property
+            name="addTime"
+            column="addTime"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

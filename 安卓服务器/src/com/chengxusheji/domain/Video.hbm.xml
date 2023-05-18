@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Video" table="Video">
+
+          <!-- 主键记录id -->
+          <id name="videoId" column="videoId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 教学标题 -->
+          <property
+            name="title"
+            column="title"
+            type="string"
+            length="80"
+          />
+
+          <!-- 多对一属性: 教学类别 -->
+          <many-to-one name="videoTypeObj"
+            column="videoTypeObj"
+            class="VideoType"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单图片属性: 教学图片 -->
+          <property
+            name="videoPhoto"
+            column="videoPhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 教学内容 -->
+          <property
+            name="content"
+            column="content"
+            type="string"
+            length="800"
+          />
+
+          <!-- 简单字符串属性: 所打位置 -->
+          <property
+            name="sportPos"
+            column="sportPos"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单图片属性: 视频文件 -->
+          <property
+            name="videoFile"
+            column="videoFile"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单整型属性: 点击率 -->
+          <property
+            name="hitNum"
+            column="hitNum"
+            type="int"
+
+          />
+
+          <!-- 简单字符串属性: 发布时间 -->
+          <property
+            name="publishTime"
+            column="publishTime"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

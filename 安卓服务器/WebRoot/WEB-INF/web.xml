@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	
+	
+	<!-- 指定spring的配置文件，默认从web根目录寻找配置文件，我们可以通过spring提供的classpath:前缀指定从类路径下寻找 -->
+	<context-param>
+	   <param-name>contextConfigLocation</param-name>
+	   <param-value>classpath:beans.xml</param-value>
+	</context-param>
+	
+	
+	<!-- 对Spring容器进行实例化 -->
+	<listener>
+	      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	
+	<!-- struts启用配置 -->
+	<filter>
+	      <filter-name>struts2</filter-name> 
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.action</url-pattern>
+    </filter-mapping>
+    
+    
+    <!-- 登录验证servlet配置 -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+      
+    <!-- 用户注册servlet配置 -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- 上传图片servlet配置 -->
+    <servlet>
+        <servlet-name>UpPhotoServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.UpPhotoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpPhotoServlet</servlet-name>
+        <url-pattern>/UpPhotoServlet</url-pattern>
+    </servlet-mapping> 
+    
+    <!-- 用户管理servlet配置 -->
+    <servlet>
+        <servlet-name>UserInfoServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.UserInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserInfoServlet</servlet-name>
+        <url-pattern>/UserInfoServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 篮球教学管理servlet配置 -->
+    <servlet>
+        <servlet-name>VideoServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.VideoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VideoServlet</servlet-name>
+        <url-pattern>/VideoServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 视频类型管理servlet配置 -->
+    <servlet>
+        <servlet-name>VideoTypeServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.VideoTypeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VideoTypeServlet</servlet-name>
+        <url-pattern>/VideoTypeServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 篮球场地管理servlet配置 -->
+    <servlet>
+        <servlet-name>PlaceServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.PlaceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PlaceServlet</servlet-name>
+        <url-pattern>/PlaceServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 场地预订管理servlet配置 -->
+    <servlet>
+        <servlet-name>PlaceOrderServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.PlaceOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PlaceOrderServlet</servlet-name>
+        <url-pattern>/PlaceOrderServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 时段信息管理servlet配置 -->
+    <servlet>
+        <servlet-name>TimeSectionServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.TimeSectionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TimeSectionServlet</servlet-name>
+        <url-pattern>/TimeSectionServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 篮球新闻管理servlet配置 -->
+    <servlet>
+        <servlet-name>NewsServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.NewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewsServlet</servlet-name>
+        <url-pattern>/NewsServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 约战留言管理servlet配置 -->
+    <servlet>
+        <servlet-name>LeavewordServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.LeavewordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LeavewordServlet</servlet-name>
+        <url-pattern>/LeavewordServlet</url-pattern>
+    </servlet-mapping>
+
+ 
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
